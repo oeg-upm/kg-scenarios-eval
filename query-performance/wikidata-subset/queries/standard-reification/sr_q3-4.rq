@@ -1,0 +1,17 @@
+
+    PREFIX wikibase: <http://wikiba.se/ontology#>
+    PREFIX wd: <http://www.wikidata.org/entity/>
+    PREFIX wds: <http://www.wikidata.org/entity/statement/>
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+
+    SELECT DISTINCT ?winner
+    WHERE {
+        ?stm wdt:P585 ?year ;
+              wdt:Ppredicate wd:P1346 ;
+              wdt:Psubject wd:Q103916 ;
+              wdt:Pobject ?winner .
+        filter(year(?year)=2013)
+      }

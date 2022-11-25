@@ -1,0 +1,14 @@
+
+    PREFIX wikibase: <http://wikiba.se/ontology#>
+    PREFIX wd: <http://www.wikidata.org/entity/>
+    PREFIX wds: <http://www.wikidata.org/entity/statement/>
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+
+    SELECT DISTINCT ?role
+    WHERE {
+        << wd:Q132863 ?p wd:Q483325 >> ps:P453 ?role .
+        VALUES ?p {ps:P161 ps:P725}
+      }

@@ -1,0 +1,34 @@
+## BKR-NAry dataset, Query B-Q3
+
+PREFIX bkr: <http://mor.nlm.nih.gov/bkr/> 
+PREFIX dc: <http://purl.org/dc/elements/1.1/> 
+PREFIX provenir: <http://knoesis.wright.edu/provenir/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX umls: <http://mor.nlm.nih.gov/umls/> 
+PREFIX meta: <http://mor.nlm.nih.gov/umls/META_> 
+PREFIX sn: <http://mor.nlm.nih.gov/umls/SEMNET_> 
+PREFIX pubmed: <http://mor.nlm.nih.gov/bkr/PUBMED_> 
+PREFIX bkr_sn: <http://mor.nlm.nih.gov/bkr/SEMNET_> 
+PREFIX bkr_meta: <http://mor.nlm.nih.gov/bkr/META_>  
+PREFIX cbkr_sn: <http://mor.nlm.nih.gov/bkr/class_SEMNET_>  
+
+
+SELECT ?o1 ?o2 ?pmid2 ?o3 ?pmid3
+WHERE {
+	bkr_meta:C0543467-INST bkr:relation ?node1 .
+	?node1 rdf:type cbkr_sn:TREATS ; 
+		bkr:applies_to ?o1 ;
+		provenir:derives_from pubmed:10979521-INST .
+
+	?o1 bkr:relation ?node2 .
+	?node2 rdf:type cbkr_sn:CAUSES ; 
+		bkr:applies_to ?o2 ;
+		provenir:derives_from ?pmid2 .
+
+	?o2 bkr:relation ?node3 .
+	?node3 rdf:type cbkr_sn:AFFECTS ; 
+		bkr:applies_to ?o3 ;
+		provenir:derives_from ?pmid3 .
+
+}

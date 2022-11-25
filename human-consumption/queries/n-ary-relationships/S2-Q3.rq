@@ -1,0 +1,11 @@
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT DISTINCT ?winner
+FROM <http://krhc1.com/events>
+WHERE {
+    wd:Q103916 wdt:P1346 ?winner_ev .
+    ?winner_ev wdt:P585 ?year ;
+               wdt:P1346 ?winner .
+    filter(year(?year)=2018)
+  }

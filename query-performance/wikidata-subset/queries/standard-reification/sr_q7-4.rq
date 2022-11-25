@@ -1,0 +1,20 @@
+
+    PREFIX wikibase: <http://wikiba.se/ontology#>
+    PREFIX wd: <http://www.wikidata.org/entity/>
+    PREFIX wds: <http://www.wikidata.org/entity/statement/>
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+
+    SELECT ?movie
+    WHERE {
+        ?movie wdt:P577 ?date .
+        ?stm wdt:Psubject ?movie ;
+             wdt:Ppredicate ?p ;
+             wdt:Pobject wd:Q193102 .
+
+        VALUES ?p {wd:P161 wd:P725}
+      }
+      ORDER BY DESC (?date)
+      LIMIT 1

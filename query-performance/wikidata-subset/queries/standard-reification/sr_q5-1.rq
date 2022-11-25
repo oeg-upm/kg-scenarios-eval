@@ -1,0 +1,26 @@
+
+    PREFIX wikibase: <http://wikiba.se/ontology#>
+    PREFIX wd: <http://www.wikidata.org/entity/>
+    PREFIX wds: <http://www.wikidata.org/entity/statement/>
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+
+    SELECT (COUNT (DISTINCT ?movie) as ?count)
+    WHERE {
+       { ?stm1 wdt:Psubject ?movie ;
+             wdt:Ppredicate wd:P161 ;
+             wdt:Pobject ?cast1 .
+
+        ?stm2 wdt:Psubject ?movie ;
+             wdt:Ppredicate wd:P161 ;
+             wdt:Pobject ?cast2 .}
+        UNION
+      {        
+        ?movie wdt:P161 ?cast1 ;
+               wdt:P161 ?cast2.
+        }
+    FILTER (?cast1 = wd:Q29250)
+    FILTER (?cast2 = wd:Q201279)
+  }

@@ -1,0 +1,18 @@
+
+    PREFIX wikibase: <http://wikiba.se/ontology#>
+    PREFIX wd: <http://www.wikidata.org/entity/>
+    PREFIX wds: <http://www.wikidata.org/entity/statement/>
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+
+    SELECT DISTINCT ?castmember
+    WHERE {
+        wd:Q1140171 wdt:P161 ?cast .
+        ?cast wdt:P161 ?castmember .
+        ?castmember wdt:Phas_event ?event_nationality ;
+                    wdt:Phas_event ?event_birth .
+        ?event_nationality wdt:P27 wd:Q30 .
+        ?event_birth wdt:P21 wd:Q6581072 .
+      }

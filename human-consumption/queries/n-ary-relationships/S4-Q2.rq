@@ -1,0 +1,10 @@
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT DISTINCT ?role
+FROM <http://krhc1.com/events>
+WHERE {
+    wd:Q27958298 wdt:P161 ?cast .
+    ?cast wdt:P453 ?role ;
+          wdt:P161 wd:Q83492 .
+}

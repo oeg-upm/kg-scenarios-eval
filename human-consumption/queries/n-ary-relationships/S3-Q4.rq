@@ -1,0 +1,13 @@
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT DISTINCT ?castmember
+FROM <http://krhc1.com/events>
+WHERE {
+    wd:Q183555 wdt:P161 ?cast .
+    ?cast wdt:P161 ?castmember .
+    ?castmember wdt:Phas_event ?event_nationality ;
+                            wdt:Phas_event ?event_birth .
+    ?event_nationality wdt:P27 wd:Q408 .
+    ?event_birth wdt:P21 wd:Q6581097 .
+  }

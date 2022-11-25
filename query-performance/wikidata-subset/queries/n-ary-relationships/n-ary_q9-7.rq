@@ -1,0 +1,18 @@
+
+    PREFIX wikibase: <http://wikiba.se/ontology#>
+    PREFIX wd: <http://www.wikidata.org/entity/>
+    PREFIX wds: <http://www.wikidata.org/entity/statement/>
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+
+    SELECT DISTINCT ?death_cause 
+    WHERE {
+        wd:Q1406202 wdt:Phas_event ?death_event ;
+               wdt:Phas_event ?occupation_event .
+        ?death_event wdt:P509 ?death_cause .
+        ?occupation_event wdt:P106 ?occupation .
+        
+        VALUES ?occupation {wd:Q10800557 wd:Q2259451 wd:Q10798782 wd:Q2405480}
+      }

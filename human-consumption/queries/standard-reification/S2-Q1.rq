@@ -1,0 +1,11 @@
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT DISTINCT ?cast
+FROM <http://krhc2.com/sr>
+WHERE {
+    ?stm wdt:P31 wd:Q3539534 ;
+             wdt:Psubject wd:Q174385 ;
+             wdt:Ppredicate wd:P161 ;
+             wdt:Pobject ?cast .
+  }

@@ -1,0 +1,11 @@
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT DISTINCT ?role
+FROM <http://krhc2.com/sr>
+WHERE {
+    ?stm wdt:P31 wd:Q3539534 ;
+              wdt:P453 ?role ;
+              wdt:Pobject wd:Q83492 ;
+              wdt:Psubject wd:Q27958298 .
+  }
