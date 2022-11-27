@@ -11,8 +11,9 @@ PREFIX ps: <http://www.wikidata.org/prop/statement/>
 SELECT ?o ?source1 ?source2
 WHERE {
 wd:META_C0040300-INST wdt:SEMNET_PART_OF ?o ;
-    p:SEMNET_PART_OF ?stm .
-?stm pq:derives_from ?source1 ;
-    pq:derives_from ?source2 .
+    p:SEMNET_PART_OF ?stm1 ;
+    p:SEMNET_PART_OF ?stm2 .
+?stm1 pq:derives_from ?source1 .
+?stm2 pq:derives_from ?source2 .
 FILTER(str(?source1) > str(?source2) )
 }
