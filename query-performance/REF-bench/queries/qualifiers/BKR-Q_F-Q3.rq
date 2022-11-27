@@ -1,0 +1,18 @@
+##BKR-qualifiers dataset, Query F-Q3
+
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wds: <http://www.wikidata.org/entity/statement/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+
+SELECT ?o ?source1 ?source2
+WHERE {
+wd:META_C0040300-INST wdt:SEMNET_PART_OF ?o ;
+    p:SEMNET_PART_OF ?stm .
+?stm pq:derives_from ?source1 ;
+    pq:derives_from ?source2 .
+FILTER(str(?source1) > str(?source2) )
+}

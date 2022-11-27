@@ -1,0 +1,19 @@
+##BKR-qualifiers dataset, Query A-Q4
+
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wds: <http://www.wikidata.org/entity/statement/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT (COUNT(?source_inst) AS ?c)
+WHERE {
+wd:META_C0543467-INST wdt:SEMNET_TREATS ?o;
+    p:SEMNET_TREATS ?stm .
+?stm pq:derives_from ?source_inst .
+?source_inst wdt:P31 ?source_cl .
+FILTER(REGEX(str(?source_inst),'PUBMED'))
+}

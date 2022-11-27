@@ -1,0 +1,22 @@
+##BKR-qualifiers dataset, Query B-Q2
+
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wds: <http://www.wikidata.org/entity/statement/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+
+SELECT ?o1 ?o2 ?pmid2 ?o3 ?pmid3
+WHERE {
+wd:META_C0543467-INST wdt:SEMNET_TREATS ?o1 ;
+    p:SEMNET_TREATS ?stm1 .
+?stm1 pq:derives_from wd:PUBMED_10979521-INST .
+?o1 wdt:SEMNET_CAUSES ?o2 ;
+    p:SEMNET_CAUSES ?stm2 .
+?stm2 pq:derives_from ?pmid2 .
+?o2 wdt:SEMNET_AFFECTS ?o3 ;
+    p:SEMNET_AFFECTS ?stm3 .
+?stm3 pq:derives_from ?pmid3 .
+}

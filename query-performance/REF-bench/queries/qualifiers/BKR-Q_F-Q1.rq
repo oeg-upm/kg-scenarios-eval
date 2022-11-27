@@ -1,0 +1,17 @@
+##BKR-qualifiers dataset, Query F-Q1
+
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wds: <http://www.wikidata.org/entity/statement/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+
+SELECT *
+WHERE {
+wd:META_C0040300-INST wdt:SEMNET_PART_OF ?o1 ;
+    p:SEMNET_PART_OF ?stm .
+?stm pq:derives_from ?source .
+FILTER(REGEX(str(?source),'1511234'))
+}
