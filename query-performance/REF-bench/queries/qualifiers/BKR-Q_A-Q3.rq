@@ -11,9 +11,9 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?source_cl (COUNT(?source_cl) AS ?c)
 WHERE {
-wd:META_C0543467-INST wdt:SEMNET_TREATS ?o;
-    p:SEMNET_TREATS ?stm .
-?stm pq:derives_from ?source_inst .
+wd:META_C0543467-INST p:SEMNET_TREATS ?stm .
+?stm pq:derives_from ?source_inst ;
+    ps:SEMNET_TREATS ?o .
 ?source_inst wdt:P31 ?source_cl .
 }
 GROUP BY ?source_cl
