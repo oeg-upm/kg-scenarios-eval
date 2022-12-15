@@ -1,6 +1,6 @@
 # Wikdiata subset
 
-This dataset is a subset of Wikidata containing information about actors, movies and characters. It is provided in four representations (Standard Reification, N-Ary Relationships, RDF-star and Wikidata's Qualifiers). Along with the datasets we include the queries used in the query performance scenario, that consists of 10 sets of 20 queries each created altering specific elements within each set, while the structure is maintained.
+This dataset is a subset of Wikidata containing information about actors, movies and characters. It is provided in four representations (Standard Reification, N-Ary Relationships, RDF-star and Wikidata's Qualifiers) in RDF and KGTK format. Along with the datasets we include the queries used in the query performance scenario, that consists of 10 sets of 20 queries each created altering specific elements within each set, while the structure is maintained.
 
 A subset of these queries is used in the user study (Sets 1-4 of queries Q1-5) and can be seen in the following table.
 | ID | Set 1                                                                                | Set 2                                                                       | Set 3                                                                       | Set 4                                                                   |
@@ -13,6 +13,8 @@ A subset of these queries is used in the user study (Sets 1-4 of queries Q1-5) a
 
 
 ## Query performance evaluation results
+
+The following table shows the results in seconds for the results of the evaluation of the Wikidata subset in Jena Fuseki 4.6.1. The lowest values of query execution time per query are highlighted in **bold**.
 
 | Query      | Standard Reification | N-Ary Relationships | Qualifiers | RDF-star |
 |------------|----------------------|---------------------|------------|----------|
