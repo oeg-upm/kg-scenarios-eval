@@ -1,9 +1,0 @@
-PREFIX wikibase: <http://wikiba.se/ontology#>
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-SELECT DISTINCT ?castmember
-FROM <http://krhc1.com/events>
-WHERE {
-        wd:Q47703 wdt:P161 ?cast .
-        ?cast wdt:P161 ?castmember .
-}
