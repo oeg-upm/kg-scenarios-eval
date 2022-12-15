@@ -3,6 +3,8 @@
 This dataset is a subset of Wikidata containing information about actors, movies and characters. It is provided in four representations (Standard Reification, N-Ary Relationships, RDF-star and Wikidata's Qualifiers) in RDF and KGTK format. Along with the datasets we include the queries used in the query performance scenario, that consists of 10 sets of 20 queries each created altering specific elements within each set, while the structure is maintained.
 
 A subset of these queries is used in the user study (Sets 1-4 of queries Q1-5) and can be seen in the following table.
+
+
 | ID | Set 1                                                                                | Set 2                                                                       | Set 3                                                                       | Set 4                                                                   |
 |----|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | Q1 | Cast of the 2005 version of Pride and prejudice                                      | Cast list of Alice in Wonderland by Tim Burton                              | Cast list of The Lord of the Rings: The Two Towers                          | Cast list of the movie Godfather 1972                                   |
@@ -10,6 +12,7 @@ A subset of these queries is used in the user study (Sets 1-4 of queries Q1-5) a
 | Q3 | Who won the academy award for best actor in 2020?                                    | Who won the academy award for best actor in 2018?                           | Who won the academy award for best actress in 2015?                         | Who won the academy award for best actress in 2013?                     |
 | Q4 | Who is the australian actress in Orange is the New Black?                            | Who is the spanish actress in Pirates of the Caribbean: On Stranger Tides?  | Who is the australian actor in Pirates of the Caribbean: On Stranger Tides? | Who is the israeli actress from Orange is the New Black?                |
 | Q5 | How many movies has Woody Harrelson and Bill Murray been in together?                | How many movies have Johnny Depp and Helena Bonham Carter been in together? | How many movies have Emma Stone and Ryan Gosling been in together?          | How many movies have Tom Holland and Robert Downey Jr been in together? |
+
 
 
 ## Query performance evaluation results
