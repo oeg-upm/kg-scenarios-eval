@@ -1,6 +1,6 @@
-# Wikdiata subset
+# WD-AMC
 
-This dataset is a subset of Wikidata containing information about actors, movies and characters. It is provided in four representations (Standard Reification, N-Ary Relationships, RDF-star and Wikidata's Qualifiers) in RDF and KGTK format. Along with the datasets we include the queries used in the query performance scenario, that consists of 10 sets of 20 queries each created altering specific elements within each set, while the structure is maintained.
+The WD-AMC dataset is a subset of Wikidata containing information about actors, movies and characters. It is provided in four representations (Standard Reification, N-Ary Relationships, RDF-star and Wikidata's Qualifiers) in RDF and KGTK format. Along with the datasets we include the queries used in the query performance scenario, that consists of 10 sets of 20 queries each created altering specific elements within each set, while the structure is maintained.
 
 A subset of these queries is used in the user study (Sets 1-4 of queries Q1-5) and can be seen in the following table.
 
