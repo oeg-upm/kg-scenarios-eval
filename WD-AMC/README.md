@@ -1,6 +1,26 @@
 # WD-AMC
 
-The WD-AMC dataset is a subset of Wikidata containing information about actors, movies and characters. It is provided in four representations (Standard Reification, N-Ary Relationships, RDF-star and Wikidata's Qualifiers) in RDF and KGTK format. Along with the datasets we include the queries used in the query performance scenario, that consists of 10 sets of 20 queries each created altering specific elements within each set, while the structure is maintained.
+The WD-AMC dataset is a subset of Wikidata containing information about actors, movies and characters. It is provided in four representations (Standard Reification, N-Ary Relationships, RDF-star and Wikidata's Qualifiers) in RDF and KGTK format. Along with the datasets we include the queries used in the query performance scenario, that consists of 20 sets of 10 queries each created altering specific elements within each set, while the structure is maintained.
+
+## Queries for the Query Evaluation Performance scenario
+
+The following table represents one set of the queries in natural language.
+
+| ID  | Questions  | Source   |
+|-----|------------|----------|
+| Q1  | Cast of the 2005 version of Pride and Prejudice | GoogleAI |
+| Q2  | What character did Natalie Portman play in The Phantom Menace? | WebQSP |
+| Q3  | Who won the academy award  for best actor in 2020? | GoogleAI |
+| Q4  | Who is the Australian actress in blue Is The New Black?| GoogleAI |
+| Q5  | How many movies have Woody Harrelson and Bill Murray been in together? | GoogleAI |
+| Q6  | What movies did Sally Field win an Oscar for?| WebQSP |
+| Q7  | What is the last movie Brittany Murphy made? | WebQSP |
+| Q8  | Which actors were born on July 20th? | GoogleAI |
+| Q9  | What was the cause of death of Sage Stallone?| GoogleAI |
+| Q10 | Which characters and actors appear in both Breaking Bad and Better Call Saul? | GoogleAI |
+
+
+## Queries for the Knowledge Exploration user study
 
 A subset of these queries is used in the user study (Sets 1-4 of queries Q1-5) and can be seen in the following table.
 
