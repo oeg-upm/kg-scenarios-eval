@@ -1,5 +1,7 @@
 # Comparison of Knowledge Graph Representations for Consumer Scenarios - Resources
 
+[![DOI](https://zenodo.org/badge/570553668.svg)](https://zenodo.org/badge/latestdoi/570553668)
+
 ## Description 
 
 This repository provides supplemental material for the analysing the differential impact of different knowledge graph representations (Standard Reification, N-Ary Relationships, Wikidata qualifiers, and RDF-star) in common consumtion scenarios, i.e., knowledge exploration, systematic querying and graph completion. The resources comprise the data, queries and notebooks used for producing the datasets and performing the evaluations. 
