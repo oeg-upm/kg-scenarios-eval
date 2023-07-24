@@ -1,0 +1,9 @@
+cff-version: 1.0.0
+authors:
+  - family-names: Iglesias-Molina
+    given-names: Ana
+    orcid: https://orcid.org/0000-0001-5375-8024
+title: oeg-upm/kg-scenarios-eval: v1.0.0
+version: v1.0.0
+date-released: 2023-07-24
+            
