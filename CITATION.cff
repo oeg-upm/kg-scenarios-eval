@@ -1,9 +1,10 @@
-cff-version: 1.0.0
+cff-version: 1.2.1
+message: "If you use this software, please cite it as below."
+title: "oeg-upm/kg-scenarios-eval: v1.0.0"
+license: Apache-2.0
 authors:
   - family-names: Iglesias-Molina
     given-names: Ana
-    orcid: https://orcid.org/0000-0001-5375-8024
-title: oeg-upm/kg-scenarios-eval: v1.0.0
-version: v1.0.0
-date-released: 2023-07-24
-            
+    orcid: "https://orcid.org/0000-0001-5375-8024"
+doi: 10.5281/zenodo.8179156
+version: 1.0.0
